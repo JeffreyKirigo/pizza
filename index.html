@@ -1,0 +1,103 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" type="text/css" href="css/fonts.css">
+
+  <title>PIZZA</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class=" jumbotron menu">
+      <table class="table table-borderless table-dark">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Size</th>
+            <th scope="col">Crusts(all)</th>
+            <th scope="col">Toppings</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Large</td>
+            <td>Any</td>
+            <td>150</td>
+            <td>50</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Medium</td>
+            <td>Any</td>
+            <td>100</td>
+            <td>50</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td >Small</td>
+            <td>Any</td>
+            <td>50</td>
+            <td>50</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="jumbotron">
+      <h1><strong><em>ORDER YOURS HERE</em></strong></h1>
+      <form action="" class="form-group">
+        <div class="">
+          <label for="sizes">Pick a size:</label>
+          <select name="pizzaSize" class="form-control" id="">
+            <option value="large">Large</option>
+            <option value="medium">Medium</option>
+            <option value="small">Small</option>
+          </select>
+          <br>
+          <label for="crust">Get Crusty:</label>
+          <select name="crustType" class="form-control" id="">
+            <option value="crispy">Crispy</option>
+            <option value="stuffed">Stuffed</option>
+            <option value="gluten_free">Gluten Free</option>
+          </select>
+          <br><br>
+          <label for="toppings">Top it up:</label>
+          <select name="toppings" class="form-control" id="">
+            <option value="pepperoni">Pepperoni</option>
+            <option value="mushrooms">Mushrooms</option>
+            <option value="onions">Onions</option>
+            <option value="sausage">Sausage</option>
+            <option value="bacon">Bacon</option>
+            <option value="extraCheese">Extra-cheese</option>
+            <option value="blackOlives">Black Olives</option>
+            <option value="greenPepper">Green pepper</option>
+            <option value="pineapple">Pineapple</option>
+            <option value="spinach">Spinach</option>
+          </select>
+          <br>
+          <label for="access">Access it:</label>
+          <select name="access" class="form-control" id="">
+            <option value="pickUp">Pick Up</option>
+            <option value="delivered">Delivered</option>
+          </select>
+          <br><br>
+          <button type="submit" class="form-control btn-primary"><i class="fa fa fa-shopping-cart"
+              aria-hidden="true"></i>
+            <strong><em>Place Order</em></strong><i class="fa fa fa-shopping-cart" aria-hidden="true"></i></button>
+
+        </div>
+    </div>
+    </form>
+  </div>
+
+  </div>
+
+</body>
+
+</html>
