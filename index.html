@@ -7,68 +7,36 @@
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/custom.css">
   <link rel="stylesheet" type="text/css" href="css/fonts.css">
+  <script src="js/jquery-3.4.1.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  
 
   <title>PIZZA</title>
 </head>
 
-<body>
+<body class="container-fluid">
   <div class="container">
-    <div class=" jumbotron menu">
-      <table class="table table-borderless table-dark">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Size</th>
-            <th scope="col">Crusts(all)</th>
-            <th scope="col">Toppings</th>
-            <th scope="col">Price</th>
-          </tr>
-        </thead>
-        <t>
-          <tr>
-            <th scope="row">1</th>
-            <td>Large</td>
-            <td>Any</td>
-            <td>150</td>
-            <td>50</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Medium</td>
-            <td>Any</td>
-            <td>100</td>
-            <td>50</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td >Small</td>
-            <td>Any</td>
-            <td>50</td>
-            <td>50</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+
     <div class="jumbotron">
-      <h1><strong><em>ORDER YOURS HERE</em></strong></h1>
-      <form action="" class="form-group">
+      <h1 style="color: tomato;"><strong><em>ORDER YOURS HERE</em></strong></h1>
+      <form action="index.html" class="form-group">
         <div class="">
           <label for="sizes">Pick a size:</label>
-          <select name="pizzaSize" class="form-control" id="">
+          <select name="pizzaSize" class="sizes form-control">
             <option value="large">Large</option>
             <option value="medium">Medium</option>
             <option value="small">Small</option>
           </select>
           <br>
           <label for="crust">Get Crusty:</label>
-          <select name="crustType" class="form-control" id="">
+          <select name="crustType" class="crusts form-control">
             <option value="crispy">Crispy</option>
             <option value="stuffed">Stuffed</option>
             <option value="gluten_free">Gluten Free</option>
           </select>
           <br><br>
           <label for="toppings">Top it up:</label>
-          <select name="toppings" class="form-control" id="">
+          <select name="toppings" class="tops form-control" >
             <option value="pepperoni">Pepperoni</option>
             <option value="mushrooms">Mushrooms</option>
             <option value="onions">Onions</option>
@@ -82,22 +50,60 @@
           </select>
           <br>
           <label for="access">Access it:</label>
-          <select name="access" class="form-control" id="">
+          <select name="acces" class="access form-control">
             <option value="pickUp">Pick Up</option>
             <option value="delivered">Delivered</option>
           </select>
           <br><br>
-          <button type="submit" class="form-control btn-primary"><i class="fa fa fa-shopping-cart"
-              aria-hidden="true"></i>
+          <button type="submit" class="btn-fluid"><i class="fa fa fa-shopping-cart" aria-hidden="true"
+              id="placeOrder"></i>
             <strong><em>Place Order</em></strong><i class="fa fa fa-shopping-cart" aria-hidden="true"></i></button>
 
         </div>
     </div>
     </form>
   </div>
-
+  <div class=" jumbotron menu">
+    <table class="table table-borderless table-dark">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Size</th>
+          <th scope="col">Crusts(all)</th>
+          <th scope="col">Toppings</th>
+          <th scope="col">Total Price</th>
+        </tr>
+      </thead>
+      <t>
+        <tr>
+          <th scope="row">Large</th>
+          <td>1000</td>
+          <td>100</td>
+          <td>150</td>
+          <td>1250</td>
+        </tr>
+        <tr>
+          <th scope="row">Medium</th>
+          <td>800</td>
+          <td>100</td>
+          <td>100</td>
+          <td>1000</td>
+        </tr>
+        <tr>
+          <th scope="row">Small</th>
+          <td>600</td>
+          <td>100</td>
+          <td>50</td>
+          <td>750</td>
+        </tr>
+        </tbody>
+    </table>
   </div>
+  </div>
+  <ul>
 
+  </ul>
+<script src="js/scripts.js"></script>
 </body>
 
 </html>

@@ -2,8 +2,19 @@
 @import url('bootstrap.css');
 @import url('fonts.css');
 .jumbotron{
-  background-color: none;
+  background-color:transparent;
+}
+.form-control{
+  background-color: bisque;
 }
 body{
-  background-image: url("images/images.jpeg");
+  background-image: url("../images/369063.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+table{
+  border-radius: 18px;
+}
+label{
+  color: #F12E07;
 }
