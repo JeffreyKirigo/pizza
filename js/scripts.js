@@ -50,12 +50,30 @@ pizza.prototype.deliveryCost = function () {
 pizza.prototype.grandTotal = function () {
   var checkoutCartTotal = 0;
 
-  for (var order = 0; order< grandTotal.length; order ++){
+  for (var order = 0; order < grandTotal.length; order++) {
     checkoutCartTotal = + grandTotal[order];
   }
   return checkoutCartTotal;
 }
-  // var size = $("select.sizes").change(function () {
+
+$(document).ready(function () {
+  $("placeOrder").click(function (e) {
+    e.preventDefault();
+    var sizes = $("select.sizes").change(function (e) {
+      e.preventDefault();
+    });
+    var crusts = $("select.crusts").change(function (e) {
+      e.preventDefault();
+
+    });
+    var tops = $("select.tops").change(function (e) {
+      e.preventDefault();
+
+    });
+    var 
+  });
+}); var
+  // size = $("select.sizes").change(function () {
   //   var selectedSize = $(this).children("option:selected").val();
   //   $("ul").append("<li><span>" + selectedSize + "</span></li>");
   // });
