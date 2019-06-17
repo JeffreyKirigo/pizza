@@ -55,7 +55,8 @@
             <option value="delivered">Delivered</option>
           </select>
           <br><br>
-          <button type="submit" class="btn-fluid"><i class="fa fa fa-shopping-cart" aria-hidden="true"
+          <button type="submit" class="btn-fluid" onclick="alert(parseInt(total = pizzaPrice + crustPrice + topPrice));
+          "><i class="fa fa fa-shopping-cart" aria-hidden="true"
               id="placeOrder"></i>
             <strong><em>Place Order</em></strong><i class="fa fa fa-shopping-cart" aria-hidden="true"></i></button>
 
@@ -76,21 +77,21 @@
       </thead>
       <t>
         <tr>
-          <th scope="row">Large</th>
+          <th class="size1" scope="row">Large</th>
           <td>1000</td>
           <td>100</td>
           <td>150</td>
           <td>1250</td>
         </tr>
         <tr>
-          <th scope="row">Medium</th>
+          <th class="size2" scope="row">Medium</th>
           <td>800</td>
           <td>100</td>
           <td>100</td>
           <td>1000</td>
         </tr>
         <tr>
-          <th scope="row">Small</th>
+          <th class="size3" scope="row">Small</th>
           <td>600</td>
           <td>100</td>
           <td>50</td>
@@ -100,9 +101,12 @@
     </table>
   </div>
   </div>
+  <div>
+    <h3><strong><em>Order Summary:</em></strong></h3>
   <ul>
 
   </ul>
+</div>
 <script src="js/scripts.js"></script>
 </body>
 
