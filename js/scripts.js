@@ -84,7 +84,7 @@ $(document).ready(function () {
     $(".sizey").text("Sizes: " + sizes);
     $(".crustey").text("Crusts: " + crusts);
     $(".toopie").text("Toppings: " + tops);
-    $(".costie").text("Cost: " + newPizzas.grandTotal());
+    $(".costie").text("Cost: " + newPizzas.;
   });
 });
   // size = $("select.sizes").change(function () {
