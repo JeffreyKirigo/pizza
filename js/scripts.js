@@ -50,7 +50,10 @@ pizza.prototype.deliveryCost = function () {
 pizza.prototype.grandTotal = function () {
   var checkoutCartTotal = 0;
 
-  for (var order = 0; order< grandTotal)
+  for (var order = 0; order< grandTotal.length; order ++){
+    checkoutCartTotal = + grandTotal[order];
+  }
+  return checkoutCartTotal;
 }
   // var size = $("select.sizes").change(function () {
   //   var selectedSize = $(this).children("option:selected").val();
