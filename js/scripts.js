@@ -30,6 +30,7 @@ $(document).ready(function () {
  
 
 var newPizza = new pizza(sizes, crusts, tops, accesses);
+pizza.prototype.total=function(){
 if (selectedAccess = Delivered){
   deliveryPrice  = 200;
 
@@ -52,6 +53,7 @@ topPrice = 50;
 else {
   alert("Pick A pizza size")
 }
+}
 
-alert(parseInt(total = pizzaPrice + crustPrice + topPrice));
+ 
 });
