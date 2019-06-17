@@ -60,19 +60,27 @@ $(document).ready(function () {
   $("placeOrder").click(function (e) {
     e.preventDefault();
     var sizes = $("select.sizes").change(function (e) {
+      var selectedSize = $(this).children("option:selected").val();
       e.preventDefault();
     });
     var crusts = $("select.crusts").change(function (e) {
+      var selectedCrust = $(this).children("option:selected").val();
       e.preventDefault();
 
     });
     var tops = $("select.tops").change(function (e) {
+      var selectedTops = $(this).children("option:selected").val();
       e.preventDefault();
 
     });
-    var 
+    var newPizzas = new pizza(sizes,crusts,tops);
+    newPizzas.pizzaPrice();
+    $(selector).text(textString);
+    $(selector).text(textString);
+    $(selector).text(textString);
+    $(selector).text(textString);
   });
-}); var
+}); 
   // size = $("select.sizes").change(function () {
   //   var selectedSize = $(this).children("option:selected").val();
   //   $("ul").append("<li><span>" + selectedSize + "</span></li>");
