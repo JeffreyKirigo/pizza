@@ -5,51 +5,46 @@ function pizza(size, crust, toppings) {
   this.pizzaTops = toppings;
   this.pizzaPrice = 0;
 }
-
-var pizzaSize = ["Large", "Medium", "Small"];
-var pizzaCrust = ["Crispy", "Stuffed", "Gluten-Free"];
-var pizzaTops = ["Pepperoni", "Extra-Cheese", "Green-pepper", "Black-Olives"];
 var cost = [];
+var pizzaSize = ["large", "medium", "small"];
+var pizzaCrust = ["crispy", "stuffed", "gluten-free"];
+var pizzaTops = ["pepperoni", "onions", "Black-Olives", "Green-pepper"];
+
 
 
 /**pizza size to pizza sizes */
 
 pizza.prototype.price = function () {
   if (this.pizzaSize === pizzaSize[0]) {
-    pizzaPrice +=1000;
+    pizzaPrice += 1000;
   }
   else if (this.pizzaSize === pizzaSize[1]) {
-    pizzaPrice +=800;
+    pizzaPrice += 800;
   }
   else if (this.pizzaSize === pizzaSize[2]) {
-    pizzaPrice +=600;
+    pizzaPrice += 600;
   }
-
-  /*pizza crust to pizza size to pizza price */
-
   if (this.pizzaCrust === pizzaCrust[0]) {
-    pizzaPrice +=150;
+    pizzaPrice += 150;
   }
   else if (this.pizzaCrust === pizzaCrust[1]) {
-    pizzaPrice +=100;
+    pizzaPrice += 100;
   }
   else if (this.pizzaCrust === pizzaCrust[2]) {
-    pizzaPrice +=50;
+    pizzaPrice += 50;
   }
-
-  /**pizza size to pizza toppings */
 
   if (this.pizzaTops === pizzaTops[0]) {
-    pizzaPrice +=150;
+    pizzaPrice += 150;
   }
   else if (this.pizzaTops === pizzaTops[1]) {
-    pizzaPrice +=100;
+    pizzaPrice += 100;
   }
   else if (this.pizzaTops === pizzaTops[2]) {
-    pizzaPrice +=50;
+    pizzaPrice += 50;
   }
   else if (this.pizzaTops === pizzaTops[3]) {
-    pizzaPrice +=50;
+    pizzaPrice += 50;
   }
   return this.pizzaPrice;
 }
@@ -59,9 +54,9 @@ pizza.prototype.deliveryCost = function () {
 }
 
 pizza.prototype.grandTotal = function () {
-  var checkoutCartTotal = this.pizzaPrice;
+  var checkoutCartTotal = 0;
 
-  for (var order = 0; order < cost.length; order++ ) {
+  for (var order = 0; order < cost.length; order++) {
     checkoutCartTotal += cost[order];
   }
   return checkoutCartTotal;
@@ -73,7 +68,7 @@ $(document).ready(function () {
 
 
 
-    var sizes = $("select.sizes").val(); 
+    var sizes = $("select.sizes").val();
     var crusts = $("select.crusts").val();
     var tops = $("select.tops").val();
 
@@ -84,7 +79,7 @@ $(document).ready(function () {
     $(".sizey").text("Sizes: " + sizes);
     $(".crustey").text("Crusts: " + crusts);
     $(".toopie").text("Toppings: " + tops);
-    $(".costie").text("Cost: " + newPizzas.;
+    $(".costie").text("Cost: " + newPizzas.grandTotal());
   });
 });
   // size = $("select.sizes").change(function () {
