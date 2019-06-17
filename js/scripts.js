@@ -1,62 +1,71 @@
-$(document).ready(function () {
-function pizza(size, crust, toppings, delivery) {
+
+function pizza(size, crust, toppings) {
   this.pizzaSize = size;
   this.pizzaCrust = crust;
   this.pizzaTops = toppings;
-  this.pizzaAccess = delivery;
+  this.pizzaPrice = 0;
 }
-var pizzaPrice;
-var crustPrice;
-var topPrice;
-var deliveryPrice;
-var total;
-
-
-  var size = $("select.sizes").change(function () {
-    var selectedSize = $(this).children("option:selected").val();
-    $("ul").append("<li><span>" + selectedSize + "</span></li>");
-  });
-  var crusts = $("select.crusts").change(function () {
-    var selectedCrust = $(this).children("option:selected").val();
-    $("ul").append("<li><span>" + selectedCrust + "</span></li>");
-  });
-  var tops = $("select.tops").change(function () {
-    var selectedTops = $(this).children("option:selected").val();
-    $("ul").append("<li><span>" + selectedTops + "</span></li>");
-  });
-  var accesses = $("select.access").change(function () {
-    var selectedAccess = $(this).children("option:selected").val();
-    $("ul").append("<li><span>" + selectedAccess + "</span></li>");
-  });
- 
-
-var newPizza = new pizza(sizes, crusts, tops, accesses);
-pizza.prototype.total=function(){
-  
-
-if (selectedAccess = Delivered){
-  deliveryPrice  = 200;
-
-if (selectedSize === Large){
-pizzaPrice = 1000;
-crustPrice = 100;
-topPrice = 150;
-}
-else if (selectedSize === Medium){
-  pizzaPrice = 1000;
-crustPrice = 100;
-topPrice = 100;
-}
-else if (selectedSize === Small){
-  pizzaPrice = 600;
-crustPrice = 100;
-topPrice = 50;
-}
-}
-else {
-  alert("Pick A pizza size")
-}
+pizza.prototype.price(){
+  var grandTotal = [];
+  var pizzaSize = ["Large", "Medium", "Small"];
+  var pizzaCrust = ["Crispy", "Stuffed", "Gluten-Free"];
+  var pizzaTops = ["Pepperoni", "Extra-Cheese", "Green-pepper", "Black-Olives"];
+  /**pizza size to pizza sizes */
+  if (this.pizzaSize === pizzaSize[0]) {
+    pizzaPrice = +1000;
+  }
+  else if (this.pizzaSize === pizzaSize[1]) {
+    pizzaPrice = +800;
+  }
+  else if (this.pizzaSize === pizzaSize[2]) {
+    pizzaPrice = +600;
+  }
+  /*pizza crust to pizza size to pizza price */
+  if (this.pizzaCrust === pizzaCrust[0]) {
+    pizzaPrice = +150;
+  }
+  else if (this.pizzaCrust === pizzaCrust[1]) {
+    pizzaPrice = +100;
+  }
+  else if (this.pizzaCrust === pizzaCrust[2]) {
+    pizzaPrice = +50;
+  }
+  /**pizza size to pizza toppings */
+  if (this.pizzaTops === pizzaSize[0]) {
+    pizzaPrice = +150;
+  }
+  else if (this.pizzaTops === pizzaSize[1]) {
+    pizzaPrice = +100;
+  }
+  else if (this.pizzaTops === pizzaSize[2]) {
+    pizzaPrice = +50;
+  }
+  return this.pizzaPrice;
 }
 
- 
-});
+pizza.prototype.deliveryCost = function () {
+  return this.deliveryCharges;
+}
+
+pizza.prototype.grandTotal = function () {
+  var checkoutCartTotal = 0;
+
+  for (var order = 0; order< grandTotal)
+}
+  // var size = $("select.sizes").change(function () {
+  //   var selectedSize = $(this).children("option:selected").val();
+  //   $("ul").append("<li><span>" + selectedSize + "</span></li>");
+  // });
+  // var crusts = $("select.crusts").change(function () {
+  //   var selectedCrust = $(this).children("option:selected").val();
+  //   $("ul").append("<li><span>" + selectedCrust + "</span></li>");
+  // });
+  // var tops = $("select.tops").change(function () {
+  //   var selectedTops = $(this).children("option:selected").val();
+  //   $("ul").append("<li><span>" + selectedTops + "</span></li>");
+  // });
+  // var accesses = $("select.access").change(function () {
+  //   var selectedAccess = $(this).children("option:selected").val();
+  //   $("ul").append("<li><span>" + selectedAccess + "</span></li>");
+  // });
+
