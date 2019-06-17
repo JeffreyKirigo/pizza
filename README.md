@@ -9,7 +9,8 @@ Has skills in creating a basic simple website.
 ####  Setup instructions - includes any scripts that need to be run if necessary.
 git clone the project at 'https://github.com/JeffreyKirigo/pizza.git/'
 The program require any javascript compatible browser such as chrome.
-####  BDD.
+or Just run it from the live pages "https://jeffreykirigo.github.io/pizza/"
+####  BDD. 
 **Run the program**;start on window load.
 
 
