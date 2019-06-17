@@ -75,10 +75,10 @@ $(document).ready(function () {
     });
     var newPizzas = new pizza(sizes,crusts,tops);
     newPizzas.pizzaPrice();
-    $(selector).text(textString);
-    $(selector).text(textString);
-    $(selector).text(textString);
-    $(selector).text(textString);
+    $(".sizey").text("1" + sizes);
+    $(".crustey").text("2" + crusts);
+    $(".toopie").text("3" + tops);
+    $(".costie").text("4"+ grandTotal);
   });
 }); 
   // size = $("select.sizes").change(function () {
