@@ -5,12 +5,15 @@ function pizza(size, crust, toppings) {
   this.pizzaTops = toppings;
   this.pizzaPrice = 0;
 }
-var cost = [];
+
 var pizzaSize = ["Large", "Medium", "Small"];
 var pizzaCrust = ["Crispy", "Stuffed", "Gluten-Free"];
 var pizzaTops = ["Pepperoni", "Extra-Cheese", "Green-pepper", "Black-Olives"];
+var cost = [];
+
 
 /**pizza size to pizza sizes */
+
 pizza.prototype.price = function () {
   if (this.pizzaSize === pizzaSize[0]) {
     pizzaPrice +=1000;
@@ -21,28 +24,32 @@ pizza.prototype.price = function () {
   else if (this.pizzaSize === pizzaSize[2]) {
     pizzaPrice +=600;
   }
+
   /*pizza crust to pizza size to pizza price */
+
   if (this.pizzaCrust === pizzaCrust[0]) {
-    pizzaPrice += 150;
+    pizzaPrice +=150;
   }
   else if (this.pizzaCrust === pizzaCrust[1]) {
-    pizzaPrice += 100;
+    pizzaPrice +=100;
   }
   else if (this.pizzaCrust === pizzaCrust[2]) {
-    pizzaPrice += 50;
+    pizzaPrice +=50;
   }
+
   /**pizza size to pizza toppings */
+
   if (this.pizzaTops === pizzaTops[0]) {
-    pizzaPrice += 150;
+    pizzaPrice +=150;
   }
   else if (this.pizzaTops === pizzaTops[1]) {
-    pizzaPrice += 100;
+    pizzaPrice +=100;
   }
   else if (this.pizzaTops === pizzaTops[2]) {
-    pizzaPrice += 50;
+    pizzaPrice +=50;
   }
   else if (this.pizzaTops === pizzaTops[3]) {
-    pizzaPrice += 50;
+    pizzaPrice +=50;
   }
   return this.pizzaPrice;
 }
@@ -52,9 +59,9 @@ pizza.prototype.deliveryCost = function () {
 }
 
 pizza.prototype.grandTotal = function () {
-  var checkoutCartTotal = 0;
+  var checkoutCartTotal = this.pizzaPrice;
 
-  for (var order = 0; order < cost.length; order++) {
+  for (var order = 0; order < cost.length; order++ ) {
     checkoutCartTotal += cost[order];
   }
   return checkoutCartTotal;
@@ -66,14 +73,14 @@ $(document).ready(function () {
 
 
 
-    var sizes = $("select.sizes").val();
+    var sizes = $("select.sizes").val(); 
     var crusts = $("select.crusts").val();
     var tops = $("select.tops").val();
 
 
     var newPizzas = new pizza(sizes, crusts, tops);
     newPizzas.price();
-    cost.push(newPizzas.pizzaPrice)
+    cost.push(newPizzas.pizzaPrice);
     $(".sizey").text("Sizes: " + sizes);
     $(".crustey").text("Crusts: " + crusts);
     $(".toopie").text("Toppings: " + tops);
