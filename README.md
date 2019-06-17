@@ -17,7 +17,7 @@ The program require any javascript compatible browser such as chrome.
 |--------------------------:|:-----------:|:--------------------
 |select size            | large,medium or small       |  Any of  the selected sizes with its price         
 |selected topping  |pepperoni,extracheese,        | Any of the selected toppings
-|select | a+b b+c c+a | Isosceles triangle 
+|select deliver option |delivery  |alerts for deliver inclusive of the cost   
 |select crust| stuffed,crispy,gluten-free   | Any of the selected crust and the cost   
   
 ### Technologies used.
