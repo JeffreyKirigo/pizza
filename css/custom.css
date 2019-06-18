@@ -22,3 +22,7 @@ label{
 #placeOrder{
   color:whitesmoke;
 }
+.summary{
+  border-radius: 18px;
+  background-color: whitesmoke;
+}
