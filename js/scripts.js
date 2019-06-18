@@ -6,13 +6,9 @@ function pizza(size, crust, toppings) {
   this.pizzaPrice = 0;
 }
 var cost = [];
-var pizzaSize = ["large", "medium", "small"];
-var pizzaCrust = ["crispy", "stuffed", "gluten-free"];
-var pizzaTops = ["pepperoni", "onions", "Black-Olives", "Green-pepper"];
-
-
-
-/**pizza size to pizza sizes */
+var pizzaSize = ["Large", "Medium", "Small"];
+var pizzaCrust = ["Crispy", "Stuffed", "Gluten-Free"];
+var pizzaTops = ["Pepperoni", "Onions", "Black-Olives", "Green-pepper"];
 
 pizza.prototype.price = function () {
   if (this.pizzaSize === pizzaSize[0]) {
@@ -63,39 +59,19 @@ pizza.prototype.grandTotal = function () {
 }
 
 $(document).ready(function () {
-  $("#placeOrder").click(function (e) {
-    e.preventDefault();
-
-
+  $("#placeOrder").click(function () {
 
     var sizes = $("select.sizes").val();
     var crusts = $("select.crusts").val();
     var tops = $("select.tops").val();
-
-
     var newPizzas = new pizza(sizes, crusts, tops);
-    newPizzas.price();
     cost.push(newPizzas.pizzaPrice);
-    $(".sizey").text("Sizes: " + sizes);
-    $(".crustey").text("Crusts: " + crusts);
-    $(".toopie").text("Toppings: " + tops);
-    $(".costie").text("Cost: " + newPizzas.grandTotal());
+    newPizzas.price();
+    $("#sizey").text("Sizes: " + sizes);
+    $("#crustey").text("Crusts: " + crusts);
+    $("#toopie").text("Toppings: " + tops);
+    $("#costie").text("Cost: " + newPizzas.grandTotal());
   });
 });
-  // size = $("select.sizes").change(function () {
-  //   var selectedSize = $(this).children("option:selected").val();
-  //   $("ul").append("<li><span>" + selectedSize + "</span></li>");
-  // });
-  // var crusts = $("select.crusts").change(function () {
-  //   var selectedCrust = $(this).children("option:selected").val();
-  //   $("ul").append("<li><span>" + selectedCrust + "</span></li>");
-  // });
-  // var tops = $("select.tops").change(function () {
-  //   var selectedTops = $(this).children("option:selected").val();
-  //   $("ul").append("<li><span>" + selectedTops + "</span></li>");
-  // });
-  // var accesses = $("select.access").change(function () {
-  //   var selectedAccess = $(this).children("option:selected").val();
-  //   $("ul").append("<li><span>" + selectedAccess + "</span></li>");
-  // });
+
 

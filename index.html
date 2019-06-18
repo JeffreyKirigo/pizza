@@ -16,43 +16,38 @@
 
 <body class="container-fluid">
   <div class="container">
-      
+
     <div class="jumbotron">
       <h1 style="color: tomato;"><strong><em>ORDER YOURS HERE</em></strong></h1>
       <form action="index.html" class="form-group">
         <div class="">
           <label for="sizes">Pick a size:</label>
           <select name="pizzaSize" class="sizes form-control">
-            <option value="large">Large</option>
-            <option value="medium">Medium</option>
-            <option value="small">Small</option>
+            <option value="Large">Large</option>
+            <option value="Medium">Medium</option>
+            <option value="Small">Small</option>
           </select>
           <br>
           <label for="crust">Get Crusty:</label>
           <select name="crustType" class="crusts form-control">
-            <option value="crispy">Crispy</option>
-            <option value="stuffed">Stuffed</option>
-            <option value="gluten-free">Gluten Free</option>
+            <option value="Crispy">Crispy</option>
+            <option value="Stuffed">Stuffed</option>
+            <option value="Gluten-Free">Gluten-Free</option>
           </select>
           <br><br>
           <label for="toppings">Top it up:</label>
           <select name="toppings" class="tops form-control">
-            <option value="pepperoni">Pepperoni</option>
-            <option value="onions">Onions</option>
+            <option value="Pepperoni">Pepperoni</option>
+            <option value="Onions">Onions</option>
             <option value="Extra-Cheese">Extra-cheese</option>
             <option value="Black-Olives">Black Olives</option>
             <option value="Green-pepper">Green pepper</option>
 
           </select>
           <br>
-          <!-- <label for="access">Access it:</label>
-          <select name="acces" class="access form-control">
-            <option value="pickUp">Pick Up</option>
-            <option value="delivered">Delivered</option>
-          </select> -->
+
           <br><br>
           <input type="submit" class="form-control bg-primary" id="placeOrder" value="send">
-          <!-- <button class="form-control bg-success" id="add"><em><strong>Add Order</strong></em></button> -->
         </div>
     </div>
     </form>
@@ -96,10 +91,10 @@
   </div>
   <div>
     <h3><strong><em>Order Summary:</em></strong></h3>
-    <p class="sizey">Size:</p>
-    <p class="crustey">Crust:</p>
-    <p class="toopie">Toppings:</p>
-    <p class="costie">Total Cost:</p>
+    <p id="sizey">Size:</p>
+    <p id="crustey">Crust:</p>
+    <p id="toopie">Toppings:</p>
+    <p id="costie">Total Cost:</p>
   </div>
   <script src="js/scripts.js"></script>
 </body>
