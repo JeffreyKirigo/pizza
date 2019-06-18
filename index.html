@@ -22,21 +22,21 @@
       <form action="index.html" class="form-group">
         <div class="">
           <label for="sizes">Pick a size:</label>
-          <select name="pizzaSize" class="sizes form-control">
+          <select name="pizzaSize" class="form-control" id="sizes">
             <option value="Large">Large</option>
             <option value="Medium">Medium</option>
             <option value="Small">Small</option>
           </select>
           <br>
           <label for="crust">Get Crusty:</label>
-          <select name="crustType" class="crusts form-control">
+          <select name="crustType" class="form-control" id="crusts">
             <option value="Crispy">Crispy</option>
             <option value="Stuffed">Stuffed</option>
             <option value="Gluten-Free">Gluten-Free</option>
           </select>
           <br><br>
           <label for="toppings">Top it up:</label>
-          <select name="toppings" class="tops form-control">
+          <select name="toppings" class="tops form-control" id="tops">
             <option value="Pepperoni">Pepperoni</option>
             <option value="Onions">Onions</option>
             <option value="Extra-Cheese">Extra-cheese</option>
@@ -44,14 +44,17 @@
             <option value="Green-pepper">Green pepper</option>
 
           </select>
+          <select name="" id="pickit">
+            <option value="pick">Pick Up</option>
+            <option value="delivery">Delivery</option>
+          </select>
+          
           <br>
-
-          <br><br>
           <input type="submit" class="form-control bg-primary" id="placeOrder" value="send">
         </div>
     </div>
     </form>
-  </div>
+  </div>  
   <div class=" jumbotron menu">
     <table class="table table-borderless table-dark">
       <thead>
@@ -94,6 +97,7 @@
     <p id="sizey">Size:</p>
     <p id="crustey">Crust:</p>
     <p id="toopie">Toppings:</p>
+    <p id="pickie">Total Cost:</p>
     <p id="costie">Total Cost:</p>
   </div>
   <script src="js/scripts.js"></script>
